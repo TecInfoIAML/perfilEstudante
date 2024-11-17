@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Educacional</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <center>
+        <div>
+           <!-- <img src="home.jpg" alt="Imagem de um grupo de estudantes tirando uma foto">-->
+            <h1 id="tituloPagina">Cadastro Perfil do Aluno</h1>
+        </div>
+        
+    <form  style="padding-top: 50%;" action="process_data.php" method="POST">
+
+        <h3>Preencha com suas informações</h3>
+             
+        <label for="nome" >Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome sem abreviações" style="width: 300px;"><br><br>
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="data_nascimento" required><br><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required placeholder="XXX.XXX.XXX-XX" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato XXX.XXX.XXX-XX"><br><br>
+
+        <label for="ra">RA (Registro Acadêmico):</label>
+        <input type="text" id="ra" name="ra" required placeholder="Digite aqui seu RA"><br><br>
+
+        <label>Sexo:</label>
+        <input type="radio" id="sexoFeminino" name="sexo" value="feminino" required>
+        <label for="sexoFeminino">Feminino</label>
+        <input type="radio" id="sexoMasculino" name="sexo" value="masculino" required>
+        <label for="sexoMasculino">Masculino</label><br><br>
+
+        <label for="cor">Cor:</label>
+        <select id="cor" name="cor" required>
+            <option value="branco">Branco</option>
+            <option value="preto">Preto</option>
+            <option value="pardo">Pardo</option>
+            <option value="amarelo">Amarelo</option>
+            <option value="indigena">Indígena</option>
+        </select><br><br>
+
+        <label for="periodo">Qual período estuda:</label>
+        <select id="periodo" name="periodo" required>
+            <option value="matutino">Matutino</option>
+            <option value="vespertino">Vespertino</option>
+            <option value="noturno">Noturno</option>
+        </select><br><br>
+
+        <label>Situação Ocupacional:</label><br>
+        <input type="radio" id="empregado" name="situacao_ocupacional" value="sim" required>
+        <label for="empregoSim">Empregado</label>
+        <input type="radio" id="desempregado" name="situacao_ocupacional" value="não" required>
+        <label for="empregoNao">Desempregado</label><br><br>
+
+        <label>Atualmente está procurando emprego?</label><br>
+        <input type="radio" id="empregoSim" name="procurando_emprego" value="sim" required>
+        <label for="empregoSim">Sim</label>
+        <input type="radio" id="empregoNao" name="procurando_emprego" value="não" required>
+        <label for="empregoNao">Não</label><br><br>
+
+        <label for="periodoTrabalho">Qual período deseja trabalhar:</label>
+        <select id="periodoTrabalho" name="periodo_trabalho">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="integral">Integral</option>
+            <option value="oQueEncontrar">O que encontrar</option>
+        </select><br><br>
+
+        <label>É o responsável financeiro de sua residência?</label><br>
+        <input type="radio" id="responsavelSim" name="responsavel_financeiro" value="sim" required>
+        <label for="responsavelSim">Sim</label>
+        <input type="radio" id="responsavelNao" name="responsavel_financeiro" value="não" required>
+        <label for="responsavelNao">Não</label><br><br>
+
+        <label>Atualmente mora com seus pais?</label><br>
+        <input type="radio" id="moraComPais" name="mora_com_pais" value="sim" required>
+        <label for="moraComPais">Sim</label>
+        <input type="radio" id="naoMoraComPais" name="mora_com_pais" value="não" required>
+        <label for="naoMoraComPais">Não</label><br><br>
+
+        <label>Situação Ocupacional do Pai:</label><br>
+        <input type="radio" id="empregadoPai" name="situacao_ocupacional_pai" value="sim" required>
+        <label for="empregadoPai">Empregado</label>
+        <input type="radio" id="desempregadoPai" name="situacao_ocupacional_pai" value="não" required>
+        <label for="desempregadoPai">Desempregado</label><br><br>
+
+        <label>Situação Ocupacional do Mãe:</label><br>
+        <input type="radio" id="empregadoMae" name="situacao_ocupacional_mae" value="sim" required>
+        <label for="empregadoMae">Empregado</label>
+        <input type="radio" id="desempregadoMae" name="situacao_ocupacional_mae" value="não" required>
+        <label for="desempregadoMae">Desempregado</label><br><br>
+
+        <label for="pessoasCasa">Quantas pessoas moram em sua casa?</label>
+        <input type="number" id="pessoasCasa" name="pessoas_casa" required><br><br>
+
+        <label for="pessoasTrabalham">Quantas trabalham?</label>
+        <input type="number" id="pessoasTrabalham" name="pessoas_trabalham" required><br><br>
+
+        <label for="rendaFamiliar">Renda familiar bruta:</label>
+        <select id="rendaFamiliar" name="renda_familiar" required>
+            <option value="1sm">1 Salário Mínimo</option>
+            <option value="1-2sm">De 1 a 2 Salários Mínimos</option>
+            <option value="2-3sm">De 2 a 3 Salários Mínimos</option>
+            <option value="3-4sm">De 3 a 4 Salários Mínimos</option>
+            <option value="4-smMais">Mais de 4 Salários Mínimos</option>
+        </select><br><br>
+
+        <label>Faz uso de algum programa social do governo?</label><br>
+        <input type="radio" id="programaSocial" name="programa_social" value="sim" required>
+        <label for="programaSocialSim">Sim</label>
+        <input type="radio" id="programaSocial" name="programa_social" value="não" required>
+        <label for="programaSocialNao">Não</label><br><br>
+
+        <label for="qualProgramaSocial">Caso sim, diga qual:</label>
+        <input type="text" id="qualProgramaSocial" name="qual_programa_social" placeholder="Digite o nome do(s) Benefício(s)" style="width: 300px;"><br><br>
+   
+
+        <label>Paga aluguel?</label><br>
+        <input type="radio" id="aluguelSim" name="paga_aluguel" value="sim" required>
+        <label for="aluguelSim">Sim</label>
+        <input type="radio" id="aluguelNao" name="paga_aluguel" value="não" required>
+        <label for="aluguelNao">Não</label><br><br>
+
+        <label>É casado(a)?</label><br>
+        <input type="radio" id="casadoSim" name="casado" value="sim" required>
+        <label for="casadoSim">Sim</label>
+        <input type="radio" id="casadoNao" name="casado" value="não" required>
+        <label for="casadoNao">Não</label><br><br>
+
+        <label>Situação Ocupacional do Cônjuge:</label><br>
+        <input type="radio" id="empregadoConjuge" name="situacao_ocupacional_conjuge" value="sim" required>
+        <label for="empregadoConjuge">Empregado</label>
+        <input type="radio" id="empregadoConjuge" name="situacao_ocupacional_conjuge" value="não" required>
+        <label for="desempregadoConjuge">Desempregado</label>
+        <input type="radio" id="desempregadoNA" name="situacao_ocupacional_conjuge" value="não" required>
+        <label for="desempregadoNA">Não se Aplica</label><br><br>
+        
+        <label>Possui filhos?</label><br>
+        <input type="radio" id="filhosSim" name="filhos" value="sim" required>
+        <label for="filhosSim">Sim</label>
+        <input type="radio" id="filhosNao" name="filhos" value="não" required>
+        <label for="filhosNao">Não</label><br><br>
+
+        <label for="quantidadeFilhos">Se sim, quantos filhos?</label>
+        <select id="quantidadeFilhos" name="quantidade_filhos">
+            <option value="naoSeAplica">Não se aplica</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 ou mais</option>
+        </select><br><br>
+
+        <label for="escolaridadeConjuge">Escolaridade do(a) cônjuge:</label>
+        <select id="escolaridadeConjuge" name="escolaridade_conjuge">
+            <option value="naoSeAplica">Não se aplica</option>
+            <option value="fundamentalIncompleto">Ensino Fundamental Incompleto</option>
+            <option value="fundamentalCompleto">Ensino Fundamental Completo</option>
+            <option value="medioIncompleto">Ensino Médio Incompleto</option>
+            <option value="medioCompleto">Ensino Médio Completo</option>
+            <option value="tecnicoIncompleto">Formação Técnica Incompleta</option>
+            <option value="tecnicoCompleto">Formação Técnica Completa</option>
+            <option value="graduacaoIncompleta">Graduação Incompleta</option>
+            <option value="graduacaoCompleta">Graduação Completa</option>
+            <option value="mestrado">Mestrado</option>
+            <option value="doutorado">Doutorado</option>
+        </select><br><br>
+
+        <label for="escolaridadeMae">Escolaridade da mãe:</label>
+        <select id="escolaridadeMae" name="escolaridade_mae" required>
+            <option value="fundamentalIncompleto">Ensino Fundamental Incompleto</option>
+            <option value="fundamentalCompleto">Ensino Fundamental Completo</option>
+            <option value="medioIncompleto">Ensino Médio Incompleto</option>
+            <option value="medioCompleto">Ensino Médio Completo</option>
+            <option value="tecnicoIncompleto">Formação Técnica Incompleta</option>
+            <option value="tecnicoCompleto">Formação Técnica Completa</option>
+            <option value="graduacaoIncompleta">Graduação Incompleta</option>
+            <option value="graduacaoCompleta">Graduação Completa</option>
+            <option value="mestrado">Mestrado</option>
+            <option value="doutorado">Doutorado</option>
+            <option value="naoSeAplica">Não se aplica</option>
+        </select><br><br>
+
+        <label for="escolaridadePai">Escolaridade do pai:</label>
+        <select id="escolaridadePai" name="escolaridade_pai" required>
+            <option value="fundamentalIncompleto">Ensino Fundamental Incompleto</option>
+            <option value="fundamentalCompleto">Ensino Fundamental Completo</option>
+            <option value="medioIncompleto">Ensino Médio Incompleto</option>
+            <option value="medioCompleto">Ensino Médio Completo</option>
+            <option value="tecnicoIncompleto">Formação Técnica Incompleta</option>
+            <option value="tecnicoCompleto">Formação Técnica Completa</option>
+            <option value="graduacaoIncompleta">Graduação Incompleta</option>
+            <option value="graduacaoCompleta">Graduação Completa</option>
+            <option value="mestrado">Mestrado</option>
+            <option value="doutorado">Doutorado</option>
+            <option value="naoSeAplica">Não se aplica</option>
+        </select><br><br>
+
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+     <br>
+     <hr style="width: 50%;color: rgb(132, 133, 134);">
+     <br>    
+</center>
+<footer id="rodape">
+    <p>Desenvolvido por Francisco Ribeiro</p>
+</footer>
+
+</body>
+</html>

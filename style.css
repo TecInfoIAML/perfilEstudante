@@ -1,0 +1,43 @@
+div{
+    width: 100%;
+    height: auto;
+    margin-top: -20%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+img{
+    width: 100%; /* Ajusta o tamanho da imagem */
+    height: 10%; /* Mantém a proporção */
+    opacity: 0.7; /* Define a transparência da imagem */
+   
+}
+div,#tituloPagina{
+    position: absolute; /* Fixa o texto sobre a imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    font-size: 2em; /* Tamanho da fonte */
+    color: rgb(250, 248, 248);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 100%;
+}
+
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#rodape {
+    background-color: #505151;
+    height: 100px;
+    color: #fbfcfc;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin: 0; 
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0; 
+    background-color: #d9dbdb;
+}
