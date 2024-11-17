@@ -1,4 +1,3 @@
-// script.js
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -11,11 +10,11 @@ document.querySelector('form').addEventListener('submit', function(e) {
     .then(response => response.text())
     .then(data => {
         alert('Dados enviados com sucesso!');
-
-        // Limpar todos os campos do formulário
-        this.reset();  // Método que limpa todos os campos de um formulário
+        console.log(data); // Verifique a resposta no console
+        this.reset();
     })
     .catch(error => {
         console.error('Erro:', error);
+        alert('Erro ao enviar os dados!');
     });
 });

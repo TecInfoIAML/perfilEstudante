@@ -1,43 +1,128 @@
-div{
-    width: 100%;
-    height: auto;
-    margin-top: -20%;
-    margin-left: 0%;
-    margin-right: 0%;
+/* Estilos gerais */
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 img{
-    width: 100%; /* Ajusta o tamanho da imagem */
-    height: 10%; /* Mantém a proporção */
-    opacity: 0.7; /* Define a transparência da imagem */
-   
-}
-div,#tituloPagina{
-    position: absolute; /* Fixa o texto sobre a imagem */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
-    font-size: 2em; /* Tamanho da fonte */
-    color: rgb(250, 248, 248);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     width: 100%;
+    height: 40%;
 }
 
-*{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-#rodape {
-    background-color: #505151;
-    height: 100px;
-    color: #fbfcfc;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    text-align: center;
-    margin: 0; 
-    padding: 0;
-}
-body{
+/* Estilos do corpo da página */
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
     margin: 0;
-    padding: 0; 
-    background-color: #d9dbdb;
+}
+
+/* Estilo do contêiner principal */
+div {
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo do formulário */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    font-size: 1em;
+}
+
+/* Estilo dos rótulos */
+label {
+   
+    font-weight: bold;
+    
+}
+
+/* Estilo dos inputs */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+/* Estilo dos botões */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7e8082;
+}
+
+
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Estilo para mensagens visuais adicionais */
+h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilo da imagem */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilo da linha divisória */
+hr {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+    width: 50%;
+}
+
+/* Estilo para telas pequenas */
+@media (max-width: 600px) {
+    img{
+        width: 100%;
+        height: 40%;
+    }
+    form {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select {
+        font-size: 0.9em;
+    }
 }
